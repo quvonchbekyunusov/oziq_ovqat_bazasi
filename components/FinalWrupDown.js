@@ -23,7 +23,7 @@ const FinalWrupDown = ({orderPush}) => {
           {backgroundColor: '#2323C8', height: 40},
         ]}
         onPress={orderPush}>
-        <Text style={[t.textCenter, t.mT2, {color: 'white'}]}>Готово</Text>
+        <Text style={[t.textCenter, t.mT2, {color: 'white'}]}>Tayyor</Text>
       </TouchableOpacity>
     </View>
   );

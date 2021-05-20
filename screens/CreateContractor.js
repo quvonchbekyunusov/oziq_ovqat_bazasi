@@ -225,7 +225,7 @@ const CreateContractor = ({navigation}) => {
         });
     } else {
       if (!name) {
-        alert('Заполните все поле');
+        alert('Iltimos hammasini to`ldiring');
       }
 
       setLoader(false);
@@ -267,7 +267,7 @@ const CreateContractor = ({navigation}) => {
                 marginTop: 10,
                 marginBottom: 10,
               }}>
-              Добавить контрактор
+              Hamkor qo`shish
             </Text>
             <TouchableOpacity
               style={{marginTop: 10, marginLeft: 20, marginBottom: 10}}
@@ -307,7 +307,7 @@ const CreateContractor = ({navigation}) => {
                       fontWeight: 'bold',
                       fontFamily: 'Golos-text_Regular',
                     }}>
-                    Поблизости есть {areaContractors.length} точки
+                    Atrofda {areaContractors.length} ta savdo nuqtalari bor
                   </Text>
                 </View>
 
@@ -392,90 +392,90 @@ const CreateContractor = ({navigation}) => {
 
           <Text
             style={{fontFamily: 'Lato-Regular', fontSize: 16, marginLeft: 20}}>
-            Имя
+            Nomi
           </Text>
           <Input
             press={press}
             value={name}
             setValue={setName}
-            placeholder="Имя"
+            placeholder="Nomi"
           />
           <Text
             style={{fontFamily: 'Lato-Regular', fontSize: 16, marginLeft: 20}}>
-            Официальное название
+            Rasmiy nomlanishi
           </Text>
           <Input
             press={press}
             editable={fillQRedit}
             value={officialName}
             setValue={setOfficialName}
-            placeholder="Официальное название"
+            placeholder="Rasmiy nomlanishi"
           />
           <Text
             style={{fontFamily: 'Lato-Regular', fontSize: 16, marginLeft: 20}}>
-            ИНН
+            INN
           </Text>
           <InnInput
             value={tin}
             setValue={setTin}
             press={press}
-            placeholder="ИНН"
+            placeholder="INN"
             keyboardType="number-pad"
             handleInn={handleInn}
             loader2={loader2}
           />
           <Text
             style={{fontFamily: 'Lato-Regular', fontSize: 16, marginLeft: 20}}>
-            Официальный адрес
+            Rasmiy manzil
           </Text>
           <Input
             press={press}
             editable={fillQRedit}
             value={officialAddress}
             setValue={setOfficialAddress}
-            placeholder="Официальный адрес"
+            placeholder="Rasmiy manzil"
           />
           <Text
             style={{fontFamily: 'Lato-Regular', fontSize: 16, marginLeft: 20}}>
-            Физический адрес
+            Jismoniy manzil
           </Text>
           <Input
             press={press}
             value={physicalAddress}
             setValue={setPhysicalAddress}
-            placeholder="Физический адрес"
+            placeholder="Jismoniy manzil"
           />
           <Text
             style={{fontFamily: 'Lato-Regular', fontSize: 16, marginLeft: 20}}>
-            Учетная запись
+            Qayd yozuvi
           </Text>
           <Input
             press={press}
             value={account}
             setValue={setAccount}
-            placeholder="Учетная запись"
+            placeholder="Qayd yozuvi"
           />
           <Text
             style={{fontFamily: 'Lato-Regular', fontSize: 16, marginLeft: 20}}>
-            Контакт
+            Shartnoma
           </Text>
           <Input
             press={press}
             value={contact}
             setValue={setContact}
-            placeholder="Контакт"
+            placeholder="Shartnoma"
             keyboardType="number-pad"
           />
           <Text
             style={{fontFamily: 'Lato-Regular', fontSize: 16, marginLeft: 20}}>
-            Директор
+            Direktor
           </Text>
           <Input
             press={press}
             editable={fillQRedit}
             value={director}
             setValue={setDirector}
-            placeholder="Директор"
+            placeholder="Direktor"
           />
           <Text
             style={{fontFamily: 'Lato-Regular', fontSize: 16, marginLeft: 20}}>
@@ -491,25 +491,25 @@ const CreateContractor = ({navigation}) => {
           />
           <Text
             style={{fontFamily: 'Lato-Regular', fontSize: 16, marginLeft: 20}}>
-            Канал продаж
+            Sotish kanali
           </Text>
           <SalesPicker setSalesChannel={setSalesChannel} />
 
           <Text
             style={{fontFamily: 'Lato-Regular', fontSize: 16, marginLeft: 20}}>
-            Тип торговых точка
+           Savdo turi
           </Text>
           <SalesTypePicker setSalesType={setSalesType} />
 
           <Text
             style={{fontFamily: 'Lato-Regular', fontSize: 16, marginLeft: 20}}>
-            Доставка по району
+            Hududga etkazib berish
           </Text>
           <DeliveryPicker setDeliveryArea={setDeliveryArea} />
 
           <Text
             style={{fontFamily: 'Lato-Regular', fontSize: 16, marginLeft: 20}}>
-            Адрес по классификатору
+            Tasniflagich bo'yicha manzil
           </Text>
           <ClsAdressPicker setClassifierAdress={setClassifierAdress} />
 
@@ -520,7 +520,7 @@ const CreateContractor = ({navigation}) => {
               fontFamily: 'Lato-Regular',
               marginVertical: 20,
             }}>
-            Дни недели
+            Qabul kunlari
           </Text>
           <View style={{flexDirection: 'row', justifyContent: 'space-around'}}>
             <View style={styles.container}>
@@ -530,7 +530,7 @@ const CreateContractor = ({navigation}) => {
                   onPress={() => setMon(!mon)}
                   style={styles.checkbox}
                 />
-                <Text>Воскресенье</Text>
+                <Text>Yakshanba</Text>
               </View>
               <View style={styles.checkboxContainer}>
                 <Checkbox
@@ -538,7 +538,7 @@ const CreateContractor = ({navigation}) => {
                   onPress={() => setTue(!tue)}
                   style={styles.checkbox}
                 />
-                <Text>Понедельник</Text>
+                <Text>Dushanba</Text>
               </View>
               <View style={styles.checkboxContainer}>
                 <Checkbox
@@ -546,7 +546,7 @@ const CreateContractor = ({navigation}) => {
                   onPress={() => setWed(!wed)}
                   style={styles.checkbox}
                 />
-                <Text>Вторник</Text>
+                <Text>Seshanba</Text>
               </View>
               <View style={styles.checkboxContainer}>
                 <Checkbox
@@ -554,7 +554,7 @@ const CreateContractor = ({navigation}) => {
                   onPress={() => setThu(!thu)}
                   style={styles.checkbox}
                 />
-                <Text>Среда</Text>
+                <Text>Chorshanba</Text>
               </View>
             </View>
             <View>
@@ -564,7 +564,7 @@ const CreateContractor = ({navigation}) => {
                   onPress={() => setFri(!fri)}
                   style={styles.checkbox}
                 />
-                <Text>Четверг</Text>
+                <Text>Payshanba</Text>
               </View>
               <View style={styles.checkboxContainer}>
                 <Checkbox
@@ -572,7 +572,7 @@ const CreateContractor = ({navigation}) => {
                   onPress={() => setSat(!sat)}
                   style={styles.checkbox}
                 />
-                <Text>Пятница</Text>
+                <Text>Juma</Text>
               </View>
               <View style={styles.checkboxContainer}>
                 <Checkbox
@@ -580,7 +580,7 @@ const CreateContractor = ({navigation}) => {
                   onPress={() => setSun(!sun)}
                   style={styles.checkbox}
                 />
-                <Text>Суббота</Text>
+                <Text>Shanba</Text>
               </View>
             </View>
           </View>
@@ -600,7 +600,7 @@ const CreateContractor = ({navigation}) => {
               {loader ? (
                 <ActivityIndicator size="small" color="#fff" />
               ) : (
-                'Добавить контрактор'
+                'Hamkor Qo`shish'
               )}
             </Text>
           </TouchableOpacity>

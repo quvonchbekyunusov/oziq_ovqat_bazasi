@@ -74,7 +74,7 @@ const PhotoComment = ({navigation}) => {
     if (cdata.length > 0) {
       navigation.navigate('Order'), setPhotoReport(cdata);
     } else {
-      alert('заполните фотополок');
+      alert('Mahsulotni suratga tushiring');
     }
   };
   const deleteList = (index) => {
@@ -91,7 +91,7 @@ const PhotoComment = ({navigation}) => {
         />
       ) : (
         <View style={{flex: 1, alignItems: 'center'}}>
-          <Header text="Фото полок " />
+          <Header text="Mahsulot surati " />
           <ScrollView>
             {fdata?.map((item, index) => (
               <FotoList
@@ -144,15 +144,15 @@ const PhotoComment = ({navigation}) => {
                 shadowRadius: 3.84,
                 elevation: 5,
               }}>
-              <Text
+              {/* <Text
                 style={{
                   margin: 0,
                   textAlign: 'center',
                   color: 'rgba(44, 43, 71, 0.7)',
                 }}>
                 выбрать тип фото полок
-              </Text>
-              <Picker
+              </Text> */}
+              {/* <Picker
                 style={{
                   marginTop: 5,
                   // marginBottom: 10,
@@ -183,7 +183,7 @@ const PhotoComment = ({navigation}) => {
                     key={index}
                   />
                 ))}
-              </Picker>
+              </Picker> */}
             </View>
             <TextInput
               style={{
@@ -205,7 +205,7 @@ const PhotoComment = ({navigation}) => {
               }}
               value={comment}
               onChangeText={(e) => setComment(e)}
-              placeholder="Комментарии ..."
+              placeholder="Komentariya ..."
               placeholderTextColor="rgba(44, 43, 71, 0.7)"
             />
             <TouchableOpacity
@@ -220,7 +220,7 @@ const PhotoComment = ({navigation}) => {
               }}
               onPress={okHandler}>
               <Text style={{fontWeight: '600', fontSize: 14, color: '#FFFFFF'}}>
-                Готово
+                Tayyor
               </Text>
             </TouchableOpacity>
           </Modal>
@@ -250,7 +250,7 @@ const PhotoComment = ({navigation}) => {
             }}
             onPress={checkSend}>
             <Text style={{fontWeight: '600', fontSize: 14, color: '#FFFFFF'}}>
-              Готово
+              Tayyor
             </Text>
           </TouchableOpacity>
         </View>

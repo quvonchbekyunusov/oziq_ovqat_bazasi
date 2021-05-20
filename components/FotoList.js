@@ -52,7 +52,7 @@ const FotoList = ({item, deleteList}) => {
               height: 30,
               justifyContent: 'center',
             }}>
-            <Text
+            {/* <Text
               style={{
                 width: '100%',
 
@@ -64,7 +64,7 @@ const FotoList = ({item, deleteList}) => {
                 fontFamily: 'Golos-text_Regular',
               }}>
               {item.equipType || item.PhotoType}
-            </Text>
+            </Text> */}
           </View>
           <View
             style={{

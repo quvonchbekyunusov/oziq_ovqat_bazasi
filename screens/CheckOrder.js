@@ -35,7 +35,7 @@ const ChekOrder = ({route, navigation}) => {
   const [more1, setMore1] = useState(true);
   const [load, setLoad] = useState(false);
   const [editDate, setEditDate] = useState(Date);
-  const {latitude, longitude, equipment, photoReport, type} = useContext(St);
+  const {latitude, longitude, equipment, photoReport, type, shippingPoint} = useContext(St);
 
 
   const a = editDate.split('-').reverse().join('');
@@ -56,6 +56,7 @@ const ChekOrder = ({route, navigation}) => {
       PhotoReport: photoReport,
       Equipment: equipment,
       Goods: Goods,
+      UIDShippingPoint: shippingPoint
     };
     console.log(order);
     setLoad(true);
@@ -114,27 +115,27 @@ const ChekOrder = ({route, navigation}) => {
             elevation: 3,
           }}>
           <View style={styles.textView}>
-            <Text style={styles.textColor}>Тип поселения:</Text>
+            <Text style={styles.textColor}>To`lov turi:</Text>
             <Text> {SettlementsType}</Text>
           </View>
-          <View style={styles.textView}>
+          {/* <View style={styles.textView}>
             <Text style={styles.textColor}>Тип цен:</Text>
             <Text> {PriceTypeName} </Text>
-          </View>
+          </View> */}
           <View style={styles.textView}>
-            <Text style={styles.textColor}>Склад:</Text>
+            <Text style={styles.textColor}>Ombor:</Text>
             <Text>{WarehouseName}</Text>
           </View>
           <View style={styles.textView}>
-            <Text style={styles.textColor}>Сумма:</Text>
-            <Text> {numberWithSpaces(Sum)} сум</Text>
+            <Text style={styles.textColor}>Jami hisob:</Text>
+            <Text> {numberWithSpaces(Sum)} So`m</Text>
           </View>
           <View style={styles.textView}>
-            <Text style={styles.textColor}>Скидка:</Text>
-            <Text> {numberWithSpaces(DiscountSum)} сум</Text>
+            <Text style={styles.textColor}>Chegirma:</Text>
+            <Text> {numberWithSpaces(DiscountSum)} So`m</Text>
           </View>
           <View style={styles.textView}>
-            <Text style={styles.textColor}>Дата поставки:</Text>
+            <Text style={styles.textColor}>Yetkazib berish sanasi:</Text>
 
             <DatePicker
               date={editDate}
@@ -167,8 +168,8 @@ const ChekOrder = ({route, navigation}) => {
           </View>
 
           <View style={styles.textView}>
-            <Text style={styles.textColor}>Итого:</Text>
-            <Text> {numberWithSpaces(ToPay)} сум</Text>
+            <Text style={styles.textColor}>Jami:</Text>
+            <Text> {numberWithSpaces(ToPay)} So`m</Text>
           </View>
         </View>
 
@@ -199,7 +200,7 @@ const ChekOrder = ({route, navigation}) => {
                   fontWeight: '500',
                   fontFamily: 'Golos-text_Regular',
                 }}>
-                {Goods.length} Позиций
+                {Goods.length} Pozitsiya
               </Text>
               <Text
                 style={{
@@ -294,12 +295,12 @@ const ChekOrder = ({route, navigation}) => {
                         ]}>
                         {item.Discount !== 0 && (
                           <Text style={{fontSize: 10, color: '#265FFF'}}>
-                            Скидка: {item.Discount} %{' '}
+                            Chegirma: {item.Discount} %{' '}
                           </Text>
                         )}
                         {item.PromotionAmount !== 0 && (
                           <Text style={{fontSize: 10, color: '#265FFF'}}>
-                            Акция: {item.PromotionAmount} шт{' '}
+                            Aksiya: {item.PromotionAmount} шт{' '}
                           </Text>
                         )}
                       </Text>
@@ -351,7 +352,7 @@ const ChekOrder = ({route, navigation}) => {
             {load ? (
               <ActivityIndicator size="small" color="#fff" />
             ) : (
-              'Подтвердить заказ'
+              'Buyurtma qilish'
             )}
           </Text>
         </TouchableOpacity>

@@ -20,11 +20,11 @@ const FinalHeader = ({icon1, name}) => {
         ]}>
         <Text style={[t.w4_5, {fontSize: 14}]}>{name}</Text>
 
-        <Text style={[t.textCenter, t.mB4]}>Договор</Text>
+        <Text style={[t.textCenter, t.mB4]}>Shartnoma</Text>
 
-        <Text style={[t.textCenter, t.mB4]}>Тип цен</Text>
+        <Text style={[t.textCenter, t.mB4]}>Narx turi</Text>
 
-        <Text style={[t.textCenter, t.mB2]}>Склад</Text>
+        <Text style={[t.textCenter, t.mB2]}>Ombor</Text>
       </View>
     </View>
   );

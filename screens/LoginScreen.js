@@ -232,7 +232,7 @@ const LoginScreen = ({navigation}) => {
           <InputPassword
             iconType={'lock'}
             value={password}
-            plaseholderText={'Пароль'}
+            plaseholderText={'Parol'}
             onChangeText={(password) => setPassword(password)}
           />
           <View
@@ -248,7 +248,7 @@ const LoginScreen = ({navigation}) => {
                 {load3 ? (
                   <ActivityIndicator size="small" color="#fff" />
                 ) : (
-                  'Войти'
+                  'Kirish'
                 )}
               </Text>
             </TouchableOpacity>

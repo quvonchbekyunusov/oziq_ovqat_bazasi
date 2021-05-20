@@ -195,79 +195,79 @@ const ContractorInfo = ({navigation}) => {
                 marginTop: 10,
                 marginBottom: 10,
               }}>
-              Карточка контрагента
+              Shartnoma kartochkasi
             </Text>
           </View>
           <Text
             style={{fontFamily: 'Lato-Regular', fontSize: 16, marginLeft: 20}}>
-            Имя
+            Nomi
           </Text>
-          <Input value={name} setValue={setName} placeholder="Имя" />
+          <Input value={name} setValue={setName} placeholder="ИNomiмя" />
           <Text
             style={{fontFamily: 'Lato-Regular', fontSize: 16, marginLeft: 20}}>
-            Официальное название
+            Ofitsial nomi
           </Text>
           <Input
             value={officialName}
             setValue={setOfficialName}
-            placeholder="Официальное название"
+            placeholder="Ofitsial nomi"
             editable={editable}
           />
           <Text
             style={{fontFamily: 'Lato-Regular', fontSize: 16, marginLeft: 20}}>
-            ИНН
+            INN
           </Text>
           <Input
             value={tin}
             setValue={setTin}
-            placeholder="ИНН"
+            placeholder="INN"
             keyboardType="number-pad"
             editable={editable}
           />
           <Text
             style={{fontFamily: 'Lato-Regular', fontSize: 16, marginLeft: 20}}>
-            Официальный адрес
+            Official Address
           </Text>
           <Input
             value={officialAddress}
             setValue={setOfficialAddress}
-            placeholder="Официальный адрес"
+            placeholder="Official Address"
             editable ={editable}
           />
           <Text
             style={{fontFamily: 'Lato-Regular', fontSize: 16, marginLeft: 20}}>
-            Физический адрес
+            Phisical Address
           </Text>
           <Input
             value={physicalAddress}
             setValue={setPhysicalAddress}
-            placeholder="Физический адрес"
+            placeholder="Phisical Address"
             editable={editable}
           />
           <Text
             style={{fontFamily: 'Lato-Regular', fontSize: 16, marginLeft: 20}}>
-            Учетная запись
+            Hisob raqami
           </Text>
           <Input
             value={account.toString()}
             setValue={setAccount}
             keyboardType="number-pad"
-            placeholder="Учетная запись"
+            placeholder="Hisob raqami"
             editable = {editable}
           />
           <Text
             style={{fontFamily: 'Lato-Regular', fontSize: 16, marginLeft: 20}}>
-            Контакт
+            Shartnoma
           </Text>
-          <Input value={contact} setValue={setContact} placeholder="Контакт" editable = {editable} />
+          <Input value={contact} setValue={setContact} placeholder="Shartnoma" editable = {editable} />
           <Text
             style={{fontFamily: 'Lato-Regular', fontSize: 16, marginLeft: 20}}>
-            Директор
+            Direktor
           </Text>
           <Input
             value={director}
             setValue={setDirector}
-            placeholder="Директор"
+            placeholder="Direktor"
             editable = {editable}
           />
           <Text
@@ -284,25 +284,25 @@ const ContractorInfo = ({navigation}) => {
           />
           <Text
             style={{fontFamily: 'Lato-Regular', fontSize: 16, marginLeft: 20}}>
-            Канал продаж
+            Sotuv kanali
           </Text>
           <SalesPicker setSalesChannel={setSalesChannel} />
 
           <Text
             style={{fontFamily: 'Lato-Regular', fontSize: 16, marginLeft: 20}}>
-            Тип торговых точка
+            Savdo markazi turi
           </Text>
           <SalesTypePicker setSalesType={setSalesType} />
 
           <Text
             style={{fontFamily: 'Lato-Regular', fontSize: 16, marginLeft: 20}}>
-            Доставка по району
+            Tumanlar bo`yicha yetkazib berish
           </Text>
           <DeliveryPicker setDeliveryArea={setDeliveryArea} />
 
           <Text
             style={{fontFamily: 'Lato-Regular', fontSize: 16, marginLeft: 20}}>
-            Адрес по классификатору
+            Klassifikator bo`yicha manzil
           </Text>
           <ClsAdressPicker setClassifierAdress={setClassifierAdress} />
           <Text
@@ -312,7 +312,7 @@ const ContractorInfo = ({navigation}) => {
               fontFamily: 'Lato-Regular',
               marginVertical: 20,
             }}>
-            Дни недели
+            Qabul kunlari
           </Text>
           <View style={{flexDirection: 'row', justifyContent: 'space-around'}}>
             <View style={styles.container}>
@@ -322,7 +322,7 @@ const ContractorInfo = ({navigation}) => {
                   onPress={() => setMon(!mon)}
                   style={styles.checkbox}
                 />
-                <Text>Воскресенье</Text>
+                <Text>Yakshanba</Text>
               </View>
               <View style={styles.checkboxContainer}>
                 <Checkbox
@@ -330,7 +330,7 @@ const ContractorInfo = ({navigation}) => {
                   onPress={() => setTue(!tue)}
                   style={styles.checkbox}
                 />
-                <Text>Понедельник</Text>
+                <Text>Dushanba</Text>
               </View>
               <View style={styles.checkboxContainer}>
                 <Checkbox
@@ -338,7 +338,7 @@ const ContractorInfo = ({navigation}) => {
                   onPress={() => setWed(!wed)}
                   style={styles.checkbox}
                 />
-                <Text>Вторник</Text>
+                <Text>Seshanba</Text>
               </View>
               <View style={styles.checkboxContainer}>
                 <Checkbox
@@ -346,7 +346,7 @@ const ContractorInfo = ({navigation}) => {
                   onPress={() => setThu(!thu)}
                   style={styles.checkbox}
                 />
-                <Text>Среда</Text>
+                <Text>Chorshanba</Text>
               </View>
             </View>
             <View>
@@ -356,7 +356,7 @@ const ContractorInfo = ({navigation}) => {
                   onPress={() => setFri(!fri)}
                   style={styles.checkbox}
                 />
-                <Text>Четверг</Text>
+                <Text>Payshanba</Text>
               </View>
               <View style={styles.checkboxContainer}>
                 <Checkbox
@@ -364,7 +364,7 @@ const ContractorInfo = ({navigation}) => {
                   onPress={() => setSat(!sat)}
                   style={styles.checkbox}
                 />
-                <Text>Пятница</Text>
+                <Text>Juma</Text>
               </View>
               <View style={styles.checkboxContainer}>
                 <Checkbox
@@ -372,7 +372,7 @@ const ContractorInfo = ({navigation}) => {
                   onPress={() => setSun(!sun)}
                   style={styles.checkbox}
                 />
-                <Text>Суббота</Text>
+                <Text>Shanba</Text>
               </View>
             </View>
           </View>
@@ -392,7 +392,7 @@ const ContractorInfo = ({navigation}) => {
               {loader ? (
                 <ActivityIndicator size="small" color="#fff" />
               ) : (
-                'Редактировать контрактор'
+                'Shartnomani O`zgartirish'
               )}
             </Text>
           </TouchableOpacity>

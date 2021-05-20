@@ -136,7 +136,8 @@ const HomeScreen = ({route, navigation}) => {
   };
   useEffect(() => {
     if (steep === 2) {
-      setModalVisible(!isModalVisible);
+      navigation.navigate('EquipmentPhoto');
+      // setModalVisible(!isModalVisible);
       refRBSheet.current.close();
     }
   }, [steep]);
@@ -173,30 +174,7 @@ const HomeScreen = ({route, navigation}) => {
     _getSetlement()
   }, [])
   //======================getSetlementtypes==================
-  //=====================> getContracts
-  useEffect(() => {
-    setLoad3(true);
-    if (userId && password && contractorsId && brendId) {
-      async function _getContracts() {
-        const path = `contracts/${contractorsId}/${brendId}/00010101`
-        await getRequest(
-          path,
-          userId,
-          password,
-        ).then(res=> {
-          if(res===200){
-            setContracts(res.data.Contracts);
-            setLoad3(false);
-          } else {
-            Alert.alert(res.data)
-          }
-        }).catch(err=>Alert.alert(err));
-      }
-      _getContracts();
-    }
-  }, [userId, password, contractorsId, brendId]);
-  //======================> getContractors
-  console.log(urlDate2());
+
   useEffect(() => {
     if (isAll) {
       setLoad(true);
@@ -297,9 +275,9 @@ const HomeScreen = ({route, navigation}) => {
               {load ? (
                 <ActivityIndicator size="small" color="#fff" />
               ) : isAll ? (
-                'просмотр по дате'
+                'Kunlar bo`yicha ko`rish'
               ) : (
-                'все контрагенты'
+                'Barcha hamkorlar'
               )}
             </Text>
           </TouchableOpacity>
@@ -380,7 +358,7 @@ const HomeScreen = ({route, navigation}) => {
           setWarehousesId={setWarehousesId}
         />
       </RBSheet>
-      <Modal
+      {/* <Modal
         isVisible={isModalVisible}
         onBackdropPress={() => setModalVisible(false)}>
         <View style={{flex: 1}}>
@@ -453,7 +431,7 @@ const HomeScreen = ({route, navigation}) => {
             </TouchableOpacity>
           </View>
         </View>
-      </Modal>
+      </Modal> */}
       {/* =======================Long Press Modal Start======================== */}
 
       <Modal
@@ -493,7 +471,7 @@ const HomeScreen = ({route, navigation}) => {
                   fontSize: 15,
                   fontWeight: '600',
                 }}>
-                Карточка контрагента
+                Shartnoma kartochkasi
               </Text>
             </TouchableOpacity>
             <TouchableOpacity
@@ -517,7 +495,7 @@ const HomeScreen = ({route, navigation}) => {
                   fontSize: 15,
                   fontWeight: '600',
                 }}>
-                Oтказ
+                Bekor qilish
               </Text>
             </TouchableOpacity>
           </View>

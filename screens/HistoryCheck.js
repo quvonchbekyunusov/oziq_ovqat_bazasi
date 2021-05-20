@@ -136,19 +136,19 @@ const HistoryCheck = ({route, navigation}) => {
                 elevation: 3,
               }}>
               <View style={styles.textView}>
-                <Text style={styles.textColor}>Бренд:</Text>
+                <Text style={styles.textColor}>Brend:</Text>
                 <Text>{order.Brand}</Text>
               </View>
               <View style={styles.textView}>
-                <Text style={styles.textColor}>Договор:</Text>
+                <Text style={styles.textColor}>Shartnoma:</Text>
                 <Text>{order.Contract}</Text>
               </View>
-              <View style={styles.textView}>
+              {/* <View style={styles.textView}>
                 <Text style={styles.textColor}>Тип цен:</Text>
                 <Text>{order.PriceType}</Text>
-              </View>
+              </View> */}
               <View style={styles.textView}>
-                <Text style={styles.textColor}>Склад:</Text>
+                <Text style={styles.textColor}>Ombor:</Text>
                 <Text>{order.Warehouse}</Text>
               </View>
               <View style={styles.textView}>
@@ -156,20 +156,20 @@ const HistoryCheck = ({route, navigation}) => {
                 <Text>{order.Sum} сум</Text>
               </View>
               <View style={styles.textView}>
-                <Text style={styles.textColor}>Скидка:</Text>
+                <Text style={styles.textColor}>Chegirma:</Text>
                 <Text>{order.Discount} сум</Text>
               </View>
               <View style={styles.textView}>
-                <Text style={styles.textColor}>Тип Скидки:</Text>
+                <Text style={styles.textColor}>Chegirma turi:</Text>
                 <Text>{order.DiscountType}</Text>
               </View>
               <View style={styles.textView}>
-                <Text style={styles.textColor}>Дата поставки:</Text>
+                <Text style={styles.textColor}>Yetkazib berish sanasi:</Text>
                 {/* <TextInput value={editDate} onChangeText={(m) => setEditDate(m)} /> */}
                 <Text> {order.Date}</Text>
               </View>
               <View style={styles.textView}>
-                <Text style={styles.textColor}>Итого:</Text>
+                <Text style={styles.textColor}>Jami:</Text>
                 <Text>{order.Sum} сум</Text>
               </View>
             </View>
@@ -199,7 +199,7 @@ const HistoryCheck = ({route, navigation}) => {
                       fontWeight: '500',
                       fontFamily: 'Golos-text_Regular',
                     }}>
-                    {order?.Goods?.length} Позиций
+                    {order?.Goods?.length} Pozitsiya
                   </Text>
                   <Text
                     style={{
@@ -290,12 +290,12 @@ const HistoryCheck = ({route, navigation}) => {
                         ]}>
                         {good.Discount !== 0 && (
                           <Text style={{fontSize: 10, color: '#265FFF'}}>
-                            Скидка: {good.Discount} %{' '}
+                            Chegirma: {good.Discount} %{' '}
                           </Text>
                         )}
                         {good.AmountPromotion !== 0 && (
                           <Text style={{fontSize: 10, color: '#265FFF'}}>
-                            Акция: {good.AmountPromotion} шт{' '}
+                            Aksiya: {good.AmountPromotion} шт{' '}
                           </Text>
                         )}
                       </Text>

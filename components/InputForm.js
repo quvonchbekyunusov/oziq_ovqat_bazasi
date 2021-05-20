@@ -89,9 +89,9 @@ const InputForm = ({
           placeholderTextColor="#666"
           selectedValue={selectedValue}
           onValueChange={onValueChangeHandler}>
-          <Picker.Item label="выберите филиал" value={0} />
+          <Picker.Item label="Filialni tanlang" value={0} />
           {load2 ? (
-            <Picker.Item label="загрузка..." value={0} />
+            <Picker.Item label="Yuklanmoqda..." value={0} />
           ) : (
             baseValue.map((item) => (
               <Picker.Item
@@ -108,9 +108,9 @@ const InputForm = ({
           placeholderTextColor="#666"
           selectedValue={selectedValue2}
           onValueChange={onValueChangeHandler}>
-          <Picker.Item label="выберите агента" value={0} />
+          <Picker.Item label="Agentni tanlang" value={0} />
           {load ? (
-            <Picker.Item label="загрузка..." value={0} />
+            <Picker.Item label="Yuklanmoqda..." value={0} />
           ) : (
             baseValue.map((item) => (
               <Picker.Item

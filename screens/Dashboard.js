@@ -396,7 +396,7 @@ const Dashboard = ({navigation, route}) => {
                 }}>
                 <Icon name="filetext1" size={10} color="#fff" />
                 <Text style={{fontSize: 12, color: '#fff', marginLeft: 10}}>
-                  Всего заказов
+                  Barcha buyurtmalar
                 </Text>
               </View>
               <Text style={{color: '#fff', fontSize: 40}}>
@@ -428,7 +428,7 @@ const Dashboard = ({navigation, route}) => {
                 }}>
                 <Icon name="addfile" size={10} color="#fff" />
                 <Text style={{fontSize: 12, color: '#fff', marginLeft: 10}}>
-                  Осталось посетить
+                  Tashrif nuqtalari
                 </Text>
               </View>
               <Text style={{color: '#fff', fontSize: 40}}>
@@ -503,7 +503,7 @@ const Dashboard = ({navigation, route}) => {
             width: Dimensions.get('window').width - 32,
           }}>
           <Text style={{fontSize: 18, color: '#2C2B47', marginBottom: 13}}>
-            Сумма продаж
+          Savdo miqdori
           </Text>
           <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
             <View
@@ -531,7 +531,7 @@ const Dashboard = ({navigation, route}) => {
                 {sales?.month}
               </Text>
               <Text style={{fontSize: 9, color: 'rgba(52, 67, 199, 1)'}}>
-                Месяц
+                Oy
               </Text>
             </View>
           </View>

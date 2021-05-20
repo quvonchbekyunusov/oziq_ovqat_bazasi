@@ -107,34 +107,15 @@ const WrupUp = (props) => {
               size={32}
             />
           )}
-          label="посмотреть историю "
+          label="Tarixni ko`rsatish "
           onPress={() => props.navigation.navigate('HistoryHome')}
-        />
-        <DrawerItem
-          icon={({color, size}) => (
-            <Ionicons
-              name="md-document-text-outline"
-              color="#5B5B5B"
-              size={32}
-            />
-          )}
-          label="Отчеты"
-          onPress={()=>{}}
-        />
-
-        <DrawerItem
-          icon={({color, size}) => (
-            <Ionicons name="settings-outline" color="#5B5B5B" size={32} />
-          )}
-          label="Настройки"
-          onPress={()=>{}}
         />
         {checkin ? (
           <DrawerItem
             icon={({color, size}) => (
               <Ionicons name="alarm-outline" color="#5B5B5B" size={32} />
             )}
-            label="Начать день"
+            label="Ishni boshlash"
             onPress={onStart}
           />
         ) : (
@@ -142,7 +123,7 @@ const WrupUp = (props) => {
             icon={({color, size}) => (
               <Ionicons name="alarm-outline" color="#5B5B5B" size={32} />
             )}
-            label="Завершить день "
+            label="Ishni tugatish "
             onPress={onStop}
           />
         )}

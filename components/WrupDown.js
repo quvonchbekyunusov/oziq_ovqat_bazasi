@@ -69,11 +69,11 @@ const WrupDown = ({
         borderRadius: 10,
       }}>
       {step === 1 && (
-        <Text style={{fontSize: 14, fontFamily: 'Golos'}}>Выберите тип поселения</Text>
+        <Text style={{fontSize: 14, fontFamily: 'Golos'}}>To`lov turini tanlang</Text>
       )}
       {step === 2 && (
         <Text style={{fontSize: 14, fontFamily: 'Golos'}}>
-          Выбрать склад
+          Omborni tanlang
         </Text>
       )}
 

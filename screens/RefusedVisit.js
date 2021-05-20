@@ -94,7 +94,7 @@ const RefusedVisit = ({navigation}) => {
         />
       ) : (
         <View style={{alignItems: 'center'}}>
-          <Header text="Причина отказа" />
+          <Header text="Bekor qilish sababi" />
 
           <View style={styles.inputContainer}>
             <Picker
@@ -156,7 +156,7 @@ const RefusedVisit = ({navigation}) => {
               }}
               value={comment}
               onChangeText={(e) => setComment(e)}
-              placeholder="Комментарии ..."
+              placeholder="Komentariya ..."
               placeholderTextColor="rgba(44, 43, 71, 0.7)"
             />
             <TouchableOpacity
@@ -171,7 +171,7 @@ const RefusedVisit = ({navigation}) => {
               }}
               onPress={() => setModalVisible(false)}>
               <Text style={{fontWeight: '600', fontSize: 14, color: '#FFFFFF'}}>
-                Готово
+                Tayyor
               </Text>
             </TouchableOpacity>
           </Modal>
@@ -191,7 +191,7 @@ const RefusedVisit = ({navigation}) => {
               {load ? (
                 <ActivityIndicator size="small" color="#fff" />
               ) : (
-                'Готово'
+                'Tayyor'
               )}
             </Text>
           </TouchableOpacity>

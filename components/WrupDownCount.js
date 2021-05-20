@@ -45,7 +45,7 @@ const WrupDownCount = ({
       }}>
       <View style={[t.flex, t.flexRow, t.mX10]}>
         <Text style={[t.w2_4, {color: 'rgba(38, 95, 255, 1)', marginTop: 10, fontSize: 14}]}>
-          Итого:{' '}
+          Jami:{' '}
           {numberWithSpaces(
             summ.reduce(function (a, b) {
               return a + b;
@@ -89,7 +89,7 @@ const WrupDownCount = ({
               {load ? (
                 <ActivityIndicator size="small" color="#fff" />
               ) : (
-                'Готово'
+                'Tayyor'
               )}
             </Text>
           </TouchableOpacity>

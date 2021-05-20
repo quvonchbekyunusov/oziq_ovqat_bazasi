@@ -29,7 +29,7 @@ const FinaScreen = ({route, navigation}) => {
                 fontSize: 20,
                 fontFamily: 'Golos-text_Regular',
               }}>
-              Готово
+              Tayyor
             </Text>
           </View>
         ) : (

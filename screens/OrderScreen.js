@@ -113,7 +113,7 @@ const OrderScreen = ({navigation}) => {
         setLoad2(false);
       });
     } else {
-      alert('пожалуйста закажите товар ');
+      alert('Iltimos mahsulot buyurtma qiling ');
       setLoad2(false);
     }
   };
@@ -121,18 +121,18 @@ const OrderScreen = ({navigation}) => {
   const pageChaenge = () => {
     
     Alert.alert(
-      "Вы соглашаетесь с тем, то ваши покупки будут отменены?",
+      "Xaridlaringiz bekor qilinishiga rozilik bildirasizmi?",
       "",
       [
         {
-          text: "Да",
+          text: "Ha",
           
           onPress: () => {navigation.navigate('Home');
           setSteep(0)},
           style: "cancel",
         },
         {
-          text: "Нет",
+          text: "Yo`q",
           onPress: () => {},
           style: "cancel",
         },
@@ -180,7 +180,7 @@ const OrderScreen = ({navigation}) => {
           }
         }
         if (x === item.UIDNom && newCount > item.Amount) {
-          alert('товара недостаточно ');
+          alert('Tovar yetarli emas ');
         }
         return item;
 
@@ -252,10 +252,10 @@ const OrderScreen = ({navigation}) => {
   console.log(nomenclatures, 'nomenclatures==========================');
   }, [userId, password, warehousesId, contractorsId, type, userData.brends])
   const handleNom = (e, i) => {
-    const brendid = e
-    console.log(brendid);
-    setBrendId(e);
-    // setLoad(true);
+    // const brendid = e
+    // console.log(brendid);
+    // setBrendId(e);
+    // // setLoad(true);
     setIndexBrend(i)
   }
 
@@ -263,7 +263,7 @@ const OrderScreen = ({navigation}) => {
     <View style={{flex: 1}}>
       <Header
         icon1="left"
-        text="Заказ покупателя"
+        text="Buyurtma oynasi"
         icon2="search1"
         eventHandler={pageChaenge}
         filter={filter}
@@ -288,26 +288,25 @@ const OrderScreen = ({navigation}) => {
               </TouchableOpacity>
               {isShow && 
               <View>
-              { indexBrend == index &&
-                nomenclatures?.forEach((nomenclature)=>(
-                  (nomenclature[0]==brend.UIDBrend && isShow && nomenclature[1].length > 0) ? (
-                    nomenclature[1]?.map((nomenclature, index)=>(
-                      <CardTwo
-                      name={nomenclature.Name}
-                      amount={nomenclature.Amount}
-                      UIDUnit={nomenclature.UIDUnit}
-                      UIDNom={nomenclature.UIDNom}
-                      Price={nomenclature.Price}
-                      setSumm={setSumm}
-                      countItem={nomenclature.count}
-                      key={index + String(nomenclature.count) + x+newCount}
-                      index={index}
-                      x={x}
-                      onClickHandler={onClickHandler}
-                      />
-                    )
+              { indexBrend == index &&  nomenclatures.find(nomenclature=>
+                  (nomenclature[0]==brend.UIDBrend && isShow && nomenclature[1].length > 0))?
+                nomenclatures.find(nomenclature=>
+                  (nomenclature[0]==brend.UIDBrend && isShow && nomenclature[1].length > 0))[1].map((nomenclature, index)=>(
+                    <CardTwo
+                    name={nomenclature.Name}
+                    amount={nomenclature.Amount}
+                    UIDUnit={nomenclature.UIDUnit}
+                    UIDNom={nomenclature.UIDNom}
+                    Price={nomenclature.Price}
+                    setSumm={setSumm}
+                    countItem={nomenclature.count}
+                    key={index + String(nomenclature.count) + x+newCount}
+                    index={index}
+                    x={x}
+                    onClickHandler={onClickHandler}
+                    />
                   )
-                ): <View />))
+                ):<View/>
               }
           </View>
               }

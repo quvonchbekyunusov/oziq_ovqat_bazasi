@@ -74,7 +74,7 @@ const EquipmentPhoto = ({navigation}) => {
         },
       ]);
     } else {
-      alert('введите серийный номер');
+      alert('Seriya raqamini kiriting');
     }
   };
 
@@ -93,7 +93,7 @@ const EquipmentPhoto = ({navigation}) => {
         />
       ) : (
         <View style={{flex: 1, alignItems: 'center'}}>
-          <Header text="Оборудования " />
+          <Header text="Qadoqni surati " />
 
           <ScrollView>
             {edata?.map((item, index) => (
@@ -135,15 +135,15 @@ const EquipmentPhoto = ({navigation}) => {
                 shadowRadius: 3.84,
                 elevation: 5,
               }}>
-              <Text
+              {/* <Text
                 style={{
                   margin: 0,
                   textAlign: 'center',
                   color: 'rgba(44, 43, 71, 0.7)',
                 }}>
-                выбрать тип оборудования
-              </Text>
-              <Picker
+                uskunalar turini tanlang
+              </Text> */}
+              {/* <Picker
                 style={{
                   marginTop: 5,
                   // marginBottom: 10,
@@ -173,7 +173,7 @@ const EquipmentPhoto = ({navigation}) => {
                     key={index}
                   />
                 ))}
-              </Picker>
+              </Picker> */}
             </View>
             <TextInput
               style={{
@@ -196,7 +196,7 @@ const EquipmentPhoto = ({navigation}) => {
               value={numberInput}
               onChangeText={(e) => setNumberInput(e)}
               keyboardType="numeric"
-              placeholder="серийный номер..."
+              placeholder="Seriya nomeri..."
               placeholderTextColor="rgba(44, 43, 71, 0.7)"
             />
             <TouchableOpacity
@@ -211,7 +211,7 @@ const EquipmentPhoto = ({navigation}) => {
               }}
               onPress={okHandler}>
               <Text style={{fontWeight: '600', fontSize: 14, color: '#FFFFFF'}}>
-                Готово
+                Tayyor
               </Text>
             </TouchableOpacity>
           </Modal>
@@ -241,7 +241,7 @@ const EquipmentPhoto = ({navigation}) => {
             }}
             onPress={handlePhotoChek}>
             <Text style={{fontWeight: '600', fontSize: 14, color: '#FFFFFF'}}>
-              Готово
+              Tayyor
             </Text>
           </TouchableOpacity>
         </View>

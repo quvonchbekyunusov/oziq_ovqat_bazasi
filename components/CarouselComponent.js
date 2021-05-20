@@ -9,8 +9,8 @@ const CarouselComponent = ({graph}) => {
   const data= (graph.sumGraph !== undefined && graph.amountGraph !==undefined) ?
  [{
     labels: [graph.sumGraph[0].day, graph.sumGraph[1].day, graph.sumGraph[2].day, graph.sumGraph[3].day, graph.sumGraph[4].day, graph.sumGraph[5].day, graph.sumGraph[6].day],
-    label: 'Сумма продаж',
-    label2: 'Тысяча сумов',
+    label: 'Savdo miqdori',
+    label2: 'ming so`m',
     datasets: [
       {
         strokeWidth: 2,
@@ -28,7 +28,7 @@ const CarouselComponent = ({graph}) => {
   },
   {
     labels: [graph.amountGraph[0].day, graph.amountGraph[1].day, graph.amountGraph[2].day, graph.amountGraph[3].day, graph.amountGraph[4].day, graph.amountGraph[5].day, graph.amountGraph[6].day],
-    label: 'Kоличество продаж',
+    label: 'Savdo soni',
     label2: '',
     datasets: [
       {
