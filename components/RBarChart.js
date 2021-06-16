@@ -109,7 +109,7 @@ const RBarChart = ({
                 fontWeight: '500',
                 marginBottom: 12,
               }}>
-              Осталось:{' '}
+              Qolgan kunlar:{' '}
             </Text>
             <Text
               style={{
@@ -118,7 +118,7 @@ const RBarChart = ({
                 fontWeight: '600',
                 marginBottom: 12,
               }}>
-              {endDay?.split('.')[0] - currentDay.split('.')[0]} дней
+              {endDay?.split('.')[0] - currentDay.split('.')[0]} kun
             </Text>
           </View>
           <View style={{flexDirection: 'row'}}>
@@ -129,7 +129,7 @@ const RBarChart = ({
                 fontWeight: '500',
                 marginBottom: 12,
               }}>
-              План:{' '}
+              Reja:{' '}
             </Text>
             <Text
               style={{
@@ -149,7 +149,7 @@ const RBarChart = ({
                 fontWeight: '500',
                 marginBottom: 12,
               }}>
-              Факт:{' '}
+              Hozirgi:{' '}
             </Text>
             <Text
               style={{
@@ -169,7 +169,7 @@ const RBarChart = ({
                 fontWeight: '500',
                 marginBottom: 12,
               }}>
-              Однодневный план:{' '}
+              Bir kunlik reja:{' '}
             </Text>
             <Text
               style={{
@@ -197,7 +197,7 @@ const RBarChart = ({
                 color: '#2A3151',
                 marginLeft: 3,
               }}>
-              Бонус
+              Bonus
             </Text>
           </View>
 

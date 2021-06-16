@@ -136,7 +136,7 @@ const HomeScreen = ({route, navigation}) => {
   };
   useEffect(() => {
     if (steep === 2) {
-      navigation.navigate('EquipmentPhoto');
+      navigation.navigate('Order');
       // setModalVisible(!isModalVisible);
       refRBSheet.current.close();
     }

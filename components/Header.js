@@ -23,17 +23,20 @@ const Header = ({
         <Icon name={icon1} size={32} color="#fff" />
       </TouchableOpacity>
 
-      <TouchableOpacity style={[t.w2_4, t.pY4]}>
+      <TouchableOpacity style={[t.w2_4]}>
         {search ? (
           <TextInput
+          color='#fff'
             value={filter}
             onChangeText={(value) => setFilter(value)}
-            style={{borderBottomColor: 'black', borderBottomWidth: 1}}
+            style={{borderBottomColor: '#fff', borderBottomWidth: 1}}
             placeholder="Search"
+            placeholderTextColor = '#fff'
           />
         ) : (
           <Text
             style={[
+              t.pY4,
               t.textLg,
               t.fontBold,
               t.textCenter,

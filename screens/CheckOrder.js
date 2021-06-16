@@ -41,6 +41,7 @@ const ChekOrder = ({route, navigation}) => {
   const a = editDate.split('-').reverse().join('');
   const orderPush = () => {
     const order = {
+      VanSell: true,
       UIDBrand: route.params.data.UIDBrand,
       UIDWarehouse: route.params.data.UIDWarehouse,
       UIDContractor: route.params.data.UIDContractor,

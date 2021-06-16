@@ -291,7 +291,9 @@ const OrderScreen = ({navigation}) => {
               { indexBrend == index &&  nomenclatures.find(nomenclature=>
                   (nomenclature[0]==brend.UIDBrend && isShow && nomenclature[1].length > 0))?
                 nomenclatures.find(nomenclature=>
-                  (nomenclature[0]==brend.UIDBrend && isShow && nomenclature[1].length > 0))[1].map((nomenclature, index)=>(
+                  (nomenclature[0]==brend.UIDBrend && isShow && nomenclature[1].length > 0))[1]?.filter((d) => {
+                    return d.Name.toLowerCase().includes(filter.toLowerCase());
+                  }).map((nomenclature, index)=>(
                     <CardTwo
                     name={nomenclature.Name}
                     amount={nomenclature.Amount}
